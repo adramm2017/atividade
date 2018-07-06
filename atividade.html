@@ -1,5 +1,3 @@
-cssFormat
-htmlBeatify
 <!--Criar um gerador de curriculo php e disponibilizar um link para acesso. 
 Usar interfaces HTML e CSS para inclusão de dados pessoais como nome data de nascimento, idade... pode-se usar atécnica de escapar código html no arquivo php.
 Incluir campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. Incluir botão + para que o usuário possa clicar e os campos para incluir experiência apareçam.
@@ -13,20 +11,28 @@ Entrega: através de um link do repositório onde o gerador será mantido. Criar
  <!DOCTYPE html> <!--avisa o navegador que este é um documento html, isso faz parte do html 5 -->
  <html>
  <head>
- 	<title>Gerador de curriculo
+ 	<title>Gerador de curriculo<!--informações do documento -->
 
  	</title>
- </head>
- <body>
- <h1>Gerador de Curriculo</h1>
+ 	<meta charset="utf-8"> <!-- para tornar possível a utilização dos caracteres da lingua portuguesa -->
+ </head><!-- coleção de dados do documento-->
+
  
-HTML e CSS-->  inclusão de dados pessoais como nome data de nascimento, idade... pode-se usar atécnica de escapar código html no arquivo php.
-Incluir campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. Incluir botão + para que o usuário possa clicar e os campos para incluir experiência apareçam.
-Usar Versionamento e Git para entrega
-Usar o Xampp para teste
-Organizar o projeto com diretórios conforme exemplos
-Fazer um commit de cada alteração em uma ferramenta Git. Github ou gitlab ou bitbucket e openshift
-Importante: Criar um repositorio com um README.md, faça um clone para o seu computador, que está disponível na aula 3, incluir arquivos na pasta que foi clonada. A cada alteração faça um add e um commit com a mensagem de forma correta para facilitar o changelog. Faça um push após algum tempo para enviar as alterações para o servidor Git. Ao final, crie uma TAG e envie para o servidor central.
-Entrega: através de um link do repositório onde o gerador será mantido. Criar corretamente o README.md para que mostre o nome, detalhes do trabalho e referências de uso de bibliotecas e outros materiais utilizados
+ <body>
+
+ <h1>Gerador de Curriculo</h1>
+ <p><h2>Dados pessoais</h2> </p>
+ <p>Nome: </p>
+ <p>Data de nascimento </p>
+ <table>Idade </table>
+ <p>Endereço: Rua/Av. </p> <table> Numero </table>
+ <p>Complemento </p>
+ <p>Dados Profissionais</p>
+
+
+HTML e CSS--pode-se usar atécnica de escapar código html no arquivo php.
+campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. com botão +
+Entrega:link do repositório onde o gerador será mantido. 
+README.md nome, detalhes do trabalho e referências
  </body>
  </html>
