@@ -1,4 +1,4 @@
-<!--Criar um gerador de curriculo php e disponibilizar um link para acesso. 
+﻿<!--Criar um gerador de curriculo php e disponibilizar um link para acesso. 
 Usar interfaces HTML e CSS para inclusão de dados pessoais como nome data de nascimento, idade... pode-se usar atécnica de escapar código html no arquivo php.
 Incluir campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. Incluir botão + para que o usuário possa clicar e os campos para incluir experiência apareçam.
 Usar Versionamento e Git para entrega
