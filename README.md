@@ -23,3 +23,9 @@ Acesso em 6 de jul. de 2018. Disponível em: <https://gist.github.com/nunomazer/
 
 DEVMEDIA, Inserir texto em div com JavaScript. Acesso em 7 de jul. de 2018. Disponível em:
 <https://www.devmedia.com.br/forum/inserir-texto-em-div-com-javascript/440698>
+
+LINHADECODIGO, Trabalhando com inserção de conteúdo com jQuery. Acesso em 7 de jul. Disponível em:
+<http://www.linhadecodigo.com.br/artigo/3499/trabalhando-com-insercao-de-conteudo-com-jquery.aspx>
+
+VISUALDICAS, Progração. Acesso em 7 de jul de 2018. Disponível em:
+<https://www.visualdicas.com.br/index.php/programacao/javascript/7-como-adicionar-conteudo-html-com-javascript>

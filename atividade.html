@@ -6,6 +6,15 @@
 		<meta charset="utf-8"> <!-- para tornar possível a utilização dos caracteres da lingua portuguesa -->
 		<meta name="description" content="Atividade Reflexiva">
 		<meta name="author" content="Adriano Mello Marcelino">
+		<script type="text/javascript">
+        function gravar(){
+            var titulo = document.getElementById("txtTitulo").value;
+            var subtitulo = document.getElementById("txtSubtitulo").value;
+            var div = document.getElementById("divResultado");
+             
+            div.innerHTML = "<h1>" + titulo +"</h1>"+ "\n" + subtitulo;
+        }
+    	</script>
  	</head><!-- coleção de dados do documento-->
  	<body>
  		<form action="#" method="post">
@@ -49,26 +58,64 @@
 
 				<p>
 					<label for="nome">Experiência Profissional</label>
-					<textarea name="msg"></textarea>	
+				<!--	<textarea name="msg" id="divResultado"></textarea> -->
+					<input type="text" id="txtTitulo"/>	
 
-					<input type="submit" value="+"/>
+					<input type="submit" value="+" onclick="gravar()"/>
 					
 				</p>	
 
 				<p>
 					<label for="nome">Referências Pessoais</label>
-					<textarea name="msg"></textarea>	
+					<!--<textarea name="msg"></textarea> -->
+					<input type="text" id="txtSubtitulo"/>	
 
-					<input type="submit" value=".+."/>
+					<input type="submit" value=".+." onclick="gravar()"/>
 					</fieldset>
 				</p>					
 
 				<p><!-- talvez trocar por um button -->
 					<input type="submit" value="enviar"/>
 					</fieldset>
-				</p>	
+				</p>
+
+				<button id="btnEnviar" onclick="gravar()" >Gravar</button>
+
 		</form>
+
+		<div id="divResultado">
+    	</div>
  		
 		<!-- HTML e CSS--pode-se usar atécnica de escapar código html no arquivo php.campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. com botão +	Entrega:link do repositório onde o gerador será mantido. 	README.md nome, detalhes do trabalho e referências -->
+
+		<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>teste</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+        function gravar(){
+            var titulo = document.getElementById("txtTitulo").value;
+            var subtitulo = document.getElementById("txtSubtitulo").value;
+            var div = document.getElementById("divResultado");
+             
+            div.innerText = "<h1>" + titulo +"</h1>"+ "\n" + subtitulo;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label>Título:</label>
+        <input type="text" id="txtTitulo"/>
+        <label>Subtítulo:</label>
+        <input type="text" id="txtSubtitulo"/>
+        <button id="btnEnviar" onclick="gravar()" >Gravar</button>
+    </div>
+    <div id="divResultado">
+    </div>
+</body>
+</html>
+
+-->
 	</body>
 </html>
