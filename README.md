@@ -20,3 +20,6 @@ Acesso em 3 de jul. de 2018. Disponível em: <https://moodle.ead.unipar.br/cours
 
 GITHUBGIST, Exemplo de html;
 Acesso em 6 de jul. de 2018. Disponível em: <https://gist.github.com/nunomazer/873219>
+
+DEVMEDIA, Inserir texto em div com JavaScript. Acesso em 7 de jul. de 2018. Disponível em:
+<https://www.devmedia.com.br/forum/inserir-texto-em-div-com-javascript/440698>
