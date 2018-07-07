@@ -1,34 +1,76 @@
 <!DOCTYPE html> <!--avisa o navegador que este é um documento html, isso faz parte do html 5 -->
- <html>
- <head>
- 	<title>Gerador de curriculo
+<html>
+ 	<head>
+		<title>Gerador de curriculo </title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta charset="utf-8"> <!-- para tornar possível a utilização dos caracteres da lingua portuguesa -->
+		<meta name="description" content="Atividade Reflexiva">
+		<meta name="author" content="Adriano Mello Marcelino">
+ 	</head><!-- coleção de dados do documento-->
+ 	<body>
+ 		<form action="#" method="post">
+			<fieldset>
+				<legend><h1>Gerador de Curriculo - Dados Pessoais</h1></legend>
+				
+				<p>
+					<label for="nome">Nome</label>
+					<input type="text" name="nome"/>
+				</p>	
+				
+				<p>
+					<label for="nome">Data de nascimento</label>
+					<input type="text" name="dia"/>
+					<input type="text" name="mes"/>
+					<input type="text" name="ano"/>
+				</p>	
 
- 	</title>
- 	<link rel="stylesheet" type="text/css" href="css/style.css">
- 	<meta charset="utf-8"> <!-- para tornar possível a utilização dos caracteres da lingua portuguesa -->
- 	<meta name="description" content="Atividade Reflexiva">
- 	<meta name="author" content="Adriano Mello Marcelino">
+				<p>
+					<label for="nome">Idade</label>
+					<input type="text" name="idade"/>								
+				</p>		
 
- </head><!-- coleção de dados do documento-->
+				<p>
+					<label for="nome">Endereço (Rua/Av.)</label>
+					<input type="text" name="endereço"/>
+				</p>	
 
- 
- <body>
+				<p>
+					<label for="nome">Numero</label>
+					<input type="text" name="numero"/>
+				</p>	
 
- <h1>Gerador de Curriculo</h1>
- <p><h2>Dados pessoais</h2> </p>
- 
- <p></p>
- <p>Nome: <form>                       </form> </p>
- <p></p>
- <p>Data de nascimento </p> <p>Idade </p>
- <p>Endereço (Rua/Av.): </p> <p> Numero </p>
- <p>Complemento </p>
- <p>Dados Profissionais</p>
+				<p>
+					<label for="nome">Complemento</label>
+					<input type="text" name="complemento"/>
+				</p>	
 
+				<p>
+					<label for="nome">Email</label>
+					<input type="text" name="email"/>
+				</p>	
 
-<!-- HTML e CSS--pode-se usar atécnica de escapar código html no arquivo php.
-campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. com botão +
-Entrega:link do repositório onde o gerador será mantido. 
-README.md nome, detalhes do trabalho e referências -->
- </body>
- </html>
+				<p>
+					<label for="nome">Experiência Profissional</label>
+					<textarea name="msg"></textarea>	
+
+					<input type="submit" value="+"/>
+					
+				</p>	
+
+				<p>
+					<label for="nome">Referências Pessoais</label>
+					<textarea name="msg"></textarea>	
+
+					<input type="submit" value=".+."/>
+					</fieldset>
+				</p>					
+
+				<p>
+					<input type="submit" value="enviar"/>
+					</fieldset>
+				</p>	
+		</form>
+ 		
+		<!-- HTML e CSS--pode-se usar atécnica de escapar código html no arquivo php.campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. com botão +	Entrega:link do repositório onde o gerador será mantido. 	README.md nome, detalhes do trabalho e referências -->
+	</body>
+</html>
