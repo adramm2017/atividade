@@ -8,114 +8,100 @@
 		<meta name="author" content="Adriano Mello Marcelino">
 		<script type="text/javascript">
         function gravar(){
+            var nom = document.getElementById("nome").value;
+            var dat = document.getElementById("date").value;
+            var ida = document.getElementById("idade").value;
+            var ender = document.getElementById("endereco").value;
+            var numer = document.getElementById("numero").value;
+            var comple = document.getElementById("complemento").value;
+            var emai = document.getElementById("email").value;
             var titulo = document.getElementById("txtTitulo").value;
             var subtitulo = document.getElementById("txtSubtitulo").value;
+            var listaT = document.getElementById("lista").value;
+            var paragrafoT = document.getElementById("referencias_pessoais").value;
+            
             var div = document.getElementById("divResultado");
+
              
-            div.innerHTML = "<h1>" + titulo +"</h1>"+ "\n" + subtitulo;
+            div.innerHTML = "<h1>" + nom +"</h1>"+ "\n" + dat + "\t" + ida + "\n" + ender + "\t" + numer + "\n" + comple + "\n" + emai + "\n" + titulo + "\n" + subtitulo "\n" + listaT + "\n" + paragrafoT;
+
+      		let texto = document.getElementById("nome").value;
+      		let titulo = document.getElementById("endereco").value;
+      		var blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+      		saveAs(blob, titulo + ".txt");
+    			
         }
+
+		function adicionarE() {
+			var ing = document.getElementById("txtTitulo").value;
+		  	var lista  = document.getElementById("lista").innerHTML;
+  			lista = lista +"<li>"+ing+"</li>";
+   
+  			document.getElementById("lista").innerHTML = lista;
+		}
+ 
+		function adicionarR() {
+  			var refer = document.getElementById("txtSubtitulo").value;
+  			var paragrafo  = document.getElementById("referencias_pessoais").innerHTML;
+  			paragrafo = paragrafo +"<p>"+refer+"</p>";
+   
+  			document.getElementById("referencias_pessoais").innerHTML = paragrafo;
+		}
+
+
     	</script>
  	</head><!-- coleção de dados do documento-->
  	<body>
  		<form action="#" method="post">
 			<fieldset>
 				<legend><h1>Gerador de Curriculo - Dados Pessoais</h1></legend>
-				
-				<p>
 					<label for="nome">Nome</label>
-					<input type="text" name="nome"/>
-				</p>	
-				
-				<p>
+					<input type="text" id="nome"/>
+					
 					<label for="nome">Data de nascimento</label>
 					<input id="date" type="date">
-				</p>	
-
-				<p>
-					<label for="nome">Idade</label>
-					<input type="text" name="idade"/>								
-				</p>		
-
-				<p>
-					<label for="nome">Endereço (Rua/Av.)</label>
-					<input type="text" name="endereço"/>
-				</p>	
-
-				<p>
-					<label for="nome">Numero</label>
-					<input type="text" name="numero"/>
-				</p>	
-
-				<p>
-					<label for="nome">Complemento</label>
-					<input type="text" name="complemento"/>
-				</p>	
-
-				<p>
-					<label for="nome">Email</label>
-					<input type="text" name="email"/>
-				</p>	
-
-				<p>
-					<label for="nome">Experiência Profissional</label>
-				<!--	<textarea name="msg" id="divResultado"></textarea> -->
-					<input type="text" id="txtTitulo"/>	
-
-					<input type="submit" value="+" onclick="gravar()"/>
 					
-				</p>	
-
-				<p>
+					<label for="nome">Idade</label>
+					<input type="text" id="idade"/>								
+					
+					<label for="nome">Endereço (Rua/Av.)</label>
+					<input type="text" id="endereco"/>
+					
+					<label for="nome">Numero</label>
+					<input type="text" id="numero"/>
+					
+					<label for="nome">Complemento</label>
+					<input type="text" id="complemento"/>
+					
+					<label for="nome">Email</label>
+					<input type="text" id="email"/>
+					
+					<label for="nome">Experiência Profissional</label>
+					<input type="text" id="txtTitulo"/>	
+					<button onclick="adicionarE()">+</button>
+					
 					<label for="nome">Referências Pessoais</label>
-					<!--<textarea name="msg"></textarea> -->
 					<input type="text" id="txtSubtitulo"/>	
-
-					<input type="submit" value=".+." onclick="gravar()"/>
-					</fieldset>
-				</p>					
-
-				<p><!-- talvez trocar por um button -->
-					<input type="submit" value="enviar"/>
-					</fieldset>
-				</p>
-
-				<button id="btnEnviar" onclick="gravar()" >Gravar</button>
-
+					<button onclick="adicionarR()">+</button>
+			</fieldset>
+			<br>
+			<button id="gravar" onclick="gravar()" >Gravar</button>
 		</form>
 
-		<div id="divResultado">
+    	<br>
+    	<h3>Experiência Profissional</h3>
+    	<ul id="lista">
+    			<li>*</li>
+    	</ul>
+    	<br>
+    	<h3>Referências Pessoais</h3>
+    	<p id="referencias_pessoais">*</p>
+    	<br>
+		<p>Resultado</p>
+		<div id="divResultado">	
     	</div>
- 		
-		<!-- HTML e CSS--pode-se usar atécnica de escapar código html no arquivo php.campos dinamicamente utlizados JavaScript e jQuery como experiência profissional e referências pessoais. com botão +	Entrega:link do repositório onde o gerador será mantido. 	README.md nome, detalhes do trabalho e referências -->
-
-		<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>teste</title>
-    <meta charset="UTF-8" />
-    <script type="text/javascript">
-        function gravar(){
-            var titulo = document.getElementById("txtTitulo").value;
-            var subtitulo = document.getElementById("txtSubtitulo").value;
-            var div = document.getElementById("divResultado");
-             
-            div.innerText = "<h1>" + titulo +"</h1>"+ "\n" + subtitulo;
-        }
-    </script>
-</head>
-<body>
-    <div>
-        <label>Título:</label>
-        <input type="text" id="txtTitulo"/>
-        <label>Subtítulo:</label>
-        <input type="text" id="txtSubtitulo"/>
-        <button id="btnEnviar" onclick="gravar()" >Gravar</button>
-    </div>
-    <div id="divResultado">
-    </div>
-</body>
-</html>
-
--->
+    	*
+    	<br>
+    	<br>	
 	</body>
 </html>

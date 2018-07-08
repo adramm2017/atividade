@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!--avisa o navegador que este é um documento html, isso faz parte do html 5 -->
+<html>
+ 	<head>
+		<title>Gerador de curriculo </title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta charset="utf-8"> <!-- para tornar possível a utilização dos caracteres da lingua portuguesa -->
+		<meta name="description" content="Atividade Reflexiva">
+		<meta name="author" content="Adriano Mello Marcelino">
+		<script type="text/javascript">
+        function gravar(){
+            var titulo = document.getElementById("txtTitulo").value;
+            var subtitulo = document.getElementById("txtSubtitulo").value;
+            var div = document.getElementById("divResultado");
+             
+            div.innerHTML = "<h1>" + titulo +"</h1>"+ "\n" + subtitulo;
+        }
+
+		function adicionarE() {
+			var ing = document.getElementById("txtTitulo").value;
+		  	var lista  = document.getElementById("lista").innerHTML;
+  			lista = lista +"<li>"+ing+"</li>";
+   
+  			document.getElementById("lista").innerHTML = lista;
+		}
+ 
+		function adicionarR() {
+  			var refer = document.getElementById("txtSubtitulo").value;
+  			var paragrafo  = document.getElementById("referencias_pessoais").innerHTML;
+  			paragrafo = paragrafo +"<p>"+refer+"</p>";
+   
+  			document.getElementById("referencias_pessoais").innerHTML = paragrafo;
+		}
+
+		function gerar() {
+  			var refer = document.getElementById("txtSubtitulo").value;
+  			var paragrafo  = document.getElementById("referencias_pessoais").innerHTML;
+  			paragrafo = paragrafo +"<p>"+refer+"</p>";
+   
+  			document.getElementById("referencias_pessoais").innerHTML = paragrafo;
+		}
+
+
+
+    	</script>
+ 	</head><!-- coleção de dados do documento-->
+ 	<body>
+ 		<form action="#" method="post">
+			<fieldset>
+				<legend><h1>Gerador de Curriculo - Dados Pessoais</h1></legend>
+					<label for="nome">Nome</label>
+					<input type="text" name="nome"/>
+					<label for="nome">Data de nascimento</label>
+					<input id="date" type="date">
+					<label for="nome">Idade</label>
+					<input type="text" name="idade"/>								
+					<label for="nome">Endereço (Rua/Av.)</label>
+					<input type="text" name="endereço"/>
+					<label for="nome">Numero</label>
+					<input type="text" name="numero"/>
+					<label for="nome">Complemento</label>
+					<input type="text" name="complemento"/>
+					<label for="nome">Email</label>
+					<input type="text" name="email"/>
+					<label for="nome">Experiência Profissional</label>
+					<textarea name="msg" id="profissoes"></textarea> 
+					<input type="text" id="txtTitulo"/>	
+					<button onclick="adicionarE()">+</button>
+					<label for="nome">Referências Pessoais</label>
+					<textarea name="msg" id = "referencias"></textarea> 
+					<input type="text" id="txtSubtitulo"/>	
+					<button onclick="adicionarR()">+</button>
+			</fieldset>
+			<br>
+
+			<button id="gerar" onclick="gerar()" >Gerar Curriculo</button>
+		</form>
+
+		<div id="divResultado">	
+    	</div>
+    	<br>
+    	<h3>Experiência Profissional</h3>
+    	<ul id="lista">
+    			<li>teste</li>
+    	</ul>
+    	<br>
+    	<h3>Referências Pessoais</h3>
+    	<p id="referencias_pessoais">teste</p>
+    	<br>
+    	<br>	
+ 		
+	</body>
+</html>
