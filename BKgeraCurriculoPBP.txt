@@ -1,8 +1,3 @@
-<?php 
-include ('index.php');
-$frases = $frase ;
-$nome = $_POST['nome'];
-echo $chato; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +5,7 @@ echo $chato; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CurrÃ­culo </title>
+    <title>Currículo </title>
     <link rel="stylesheet" href="css/modelo1.css">
 </head>
 <body>
@@ -18,10 +13,7 @@ echo $chato; ?>
         <section class="lateral">
             <img src="<?= $dados['foto']; ?>" alt="Foto" class="foto">
             <h2>Nome</h2>
-            <h1><?= $nome['nome'];?></h1>
-
-
-
+            <h1><?php echo .$teste.; ?></h1>
             <h3><?= $dados['cargo']; ?></h3>
         </section>
         <section class="principal">
@@ -30,7 +22,7 @@ echo $chato; ?>
             <p><?= $dados['resumo']; ?></p>
             
             <?php if($dados['formacoes']) { ?>
-                <h2>FormaÃ§Ã£o</h2>
+                <h2>Formação</h2>
 
                 <ul class="lista-topicos">
                     <?php for($i = 0; $i < sizeof($dados['formacoes']['cursos']); $i++) { ?>
@@ -46,7 +38,7 @@ echo $chato; ?>
             <?php } ?>
             
             <?php if($dados['experiencias']) { ?>
-                <h2>ExperiÃªncia</h2>
+                <h2>Experiência</h2>
 
                 <ul class="lista-topicos">
                     <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>
@@ -66,7 +58,7 @@ echo $chato; ?>
             <ul class="lista-topicos">
                 <li>
                     <div>
-                        <h4>EndereÃ§o:</h4>
+                        <h4>Endereço:</h4>
                         <p><?= $dados['endereco']; ?></p>
                     </div>
                 </li>
