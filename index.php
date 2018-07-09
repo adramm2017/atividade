@@ -1,9 +1,8 @@
-<?php $frase = "abcdef"; ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Atividade Reflexiva">
     <meta name="author" content="Adriano Mello Marcelino">
@@ -11,14 +10,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Gerador de Currículos</a>
     </nav>
     <main class="container" style="margin-top:20px">
-        <form action="gerarCurriculo.php" method="post">
+        <form action="gerarCurriculo.php" method="post" target="_blank" enctype="multipart/form-data">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Informações gerais</h4>
