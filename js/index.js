@@ -38,16 +38,16 @@ $(function(){
                     '    <div class="card-body">'+
                     '        <div class="row">'+
                     '            <div class="col-12 col-md-4">'+
-                    '                <input type="text" class="form-control" placeholder="Cargo" name="experiencia-cargo[]">'+
+                    '                <input type="text" class="form-control" placeholder="Nome" name="experiencia-cargo[]">'+
                     '            </div>'+
                     '            <div class="col-12 col-md-3">'+
-                    '                <input type="text" class="form-control" placeholder="Empresa" name="experiencia-empresa[]">'+
+                    '                <input type="text" class="form-control" placeholder="Parentesco" name="experiencia-empresa[]">'+
                     '            </div>'+
                     '            <div class="col-6 col-md-2">'+
-                    '                <input type="text" class="form-control" placeholder="Início" name="experiencia-inicio[]">'+
+                    '                <input type="text" class="form-control" placeholder="Cidade" name="experiencia-inicio[]">'+
                     '            </div>'+
                     '            <div class="col-6 col-md-2">'+
-                    '                <input type="text" class="form-control" placeholder="Fim" name="experiencia-fim[]">'+
+                    '                <input type="text" class="form-control" placeholder="Telefone" name="experiencia-fim[]">'+
                     '            </div>'+
                     '            <div class="col col-md">'+
                     '                <button type="button" class="btn btn-danger btn-remover-item form-control" title="Remover experiência">&times;</button>'+

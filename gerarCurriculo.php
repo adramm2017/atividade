@@ -1,10 +1,25 @@
+<?php
+    $nome = $_POST['nome'];
+    $cargo = $_POST['cargo'];
+    $endereco = $_POST['endereco'];
+    $telefone = $_POST['telefone'];
+    $email = $_POST['email'];
+    $resumo = $_POST['resumo'];
+    
+$foto = "img/avatar-1.png";
+
+echo "nome";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Currículo | Modelo 1</title>
+    <title>Currículo </title>
     <link rel="stylesheet" href="css/modelo1.css">
 </head>
 <body>
@@ -12,7 +27,7 @@
         <section class="lateral">
             <img src="<?= $dados['foto']; ?>" alt="Foto" class="foto">
             <h2>Nome</h2>
-            <h1><?= $dados['nome']; ?></h1>
+            <h1><?= printf($nome) ; ?></h1>
             <h3><?= $dados['cargo']; ?></h3>
         </section>
         <section class="principal">

@@ -1,86 +1,92 @@
-<?php
-$dados = array(
-    'foto' => $foto,
-    'nome' => $_POST['nome'],
-    'cargo' => $_POST['cargo'],
-    'endereco' => $_POST['endereco'],
-    'telefone' => $_POST['telefone'],
-    'email' => $_POST['email'],
-    'resumo' => $_POST['resumo'],
-    'formacoes' => isset($_POST['formacao-curso']) ?
-                   array(
-                        'cursos' => $_POST['formacao-curso'],
-                        'instituicoes' => $_POST['formacao-instituicao'],
-                        'conclusoes' => $_POST['formacao-conclusao']
-                    ) : null, //Se o usuário não adicionou nenhuma formação, esse elemento ficará nulo
-    'experiencias' => isset($_POST['experiencia-cargo']) ? 
-                      array(
-                        'cargos' => $_POST['experiencia-cargo'],
-                        'empresas' => $_POST['experiencia-empresa'],
-                        'inicios' =>  $_POST['experiencia-inicio'],
-                        'fins' =>  $_POST['experiencia-fim'],
-                      ) : null //Se o usuário não adicionou nenhuma experiência, esse elemento ficará nulo
-);
-$foto = "img/avatar-1.png";
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Currículo | Modelo 3</title>
-    <link rel="stylesheet" href="css/modelo3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Atividade Reflexiva">
+    <meta name="author" content="Adriano Mello Marcelino">
+    <title>Gerador de Currículo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-    <main>
-        <section class="topo">
-            <h1><?= $dados['nome']; ?></h1>
-            <h2><?= $dados['cargo']; ?></h2>
-            <p><span>Telefone(s): </span><?= $dados['telefone']; ?></p>
-            <p><span>E-mail: </span><?= $dados['email']; ?></p>
-            <p><span>Endereço: </span><?= $dados['endereco']; ?></p>
-        </section>
-        <section class="conteudo">
-            <h3>Resumo</h3>
-            
-            <p><?= $dados['resumo']; ?></p>
-            
-            <?php if($dados['formacoes']) { ?>
-                <h3>Formação</h3>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Gerador de Currículos</a>
+    </nav>
+    <main class="container" style="margin-top:20px">
+        <form action="gerarCurriculo.php" method="post" target="_blank" enctype="multipart/form-data">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Informações gerais</h4>
 
-                <ul class="lista-topicos">
-                    <?php for($i = 0; $i < sizeof($dados['formacoes']['cursos']); $i++) { ?>
-                        <li>
-                            <div>
-                                <h4><?= $dados['formacoes']['cursos'][$i] ?></h4>
-                                <p><?= $dados['formacoes']['instituicoes'][$i] ?></p>
-                                <p><?= $dados['formacoes']['conclusoes'][$i] ?></p>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" name="nome" id="nome">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="cargo">Cargo pretendido</label>
+                                <input type="text" class="form-control" name="cargo" id="cargo">
                             </div>
-                        </li>
-                    <?php } ?>
-                </ul>
-            <?php } ?>
-
-            <?php if($dados['experiencias']) { ?>
-                <h3>Experiência</h3>
-
-                <ul class="lista-topicos">
-                    <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>
-                        <li>
-                            <div>
-                                <h4><?= $dados['experiencias']['cargos'][$i] ?></h4>
-                                <p><?= $dados['experiencias']['empresas'][$i] ?></p>
-                                <p><?= $dados['experiencias']['inicios'][$i] ?> a <?= $dados['experiencias']['fins'][$i] ?></p>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="foto">Foto</label>
+                                <input type="file" class="form-control" name="foto" id="foto">
                             </div>
-                        </li>
-                    <?php } ?>
-                </ul>
-            <?php } ?>
-        </section>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" name="endereco" id="endereco">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" class="form-control" name="telefone" id="telefone">
+                            </div>
+                        </div> 
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" name="email" id="email">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <label for="resumo">Resumo</label>
+                        <textarea class="form-control" name="resumo" id="resumo"></textarea>
+                    </div>
+                </div>
+                <div class="card-body" id="div-formacoes">
+                    <h4 class="card-title">Formação</h4>
+                    <button class="btn btn-sm right" id="btn-adicionar-formacao" title="Adicionar formação">Adicionar formação</button>
+                </div>
+
+                <div class="card-body" id="div-experienc">
+                    <h4 class="card-title">Referiências Pessoais</h4>
+                    <button class="btn btn-sm right" id="btn-adicionar-experiencia" title="Adicionar experiência">Adicionar Referencias</button>
+                </div>
+
+                <div class="card-body" id="div-experiencias">
+                    
+                    </div>
+                </div>
+
+                
+                <div class="card-footer">
+                    <button class="btn btn-primary" type="submit" window.print()>Gerar currículo</button>
+                    
+                    <button class="btn btn-default" type="reset">Limpar campos</button>
+                </div>
+            </div>
+        </form>
     </main>
-    <script>
-        window.print();
-    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
