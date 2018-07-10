@@ -36,7 +36,7 @@
             <?php } ?>
             
             <?php if($dados['experiencias']) { ?>
-                <h2>Experiência</h2>
+                <h2>Experiência e Referencias</h2>
 
                 <ul class="lista-topicos">
                     <?php for($i = 0; $i < sizeof($dados['experiencias']['cargos']); $i++) { ?>

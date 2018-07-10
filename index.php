@@ -71,12 +71,12 @@
                 
                 <div class="card-body" id="div-formacoes">
                     <h4 class="card-title">Formação</h4>
-                    <button class="btn btn-sm right" id="btn-adicionar-formacao" title="Adicionar formação">Adicionar formação</button>
+                    <button class="btn btn-sm right" id="btn-adicionar-formacao" title="Adicionar formação">Adicionar Formação</button>
                 </div>
 
                 <div class="card-body" id="div-experienc">
-                    <h4 class="card-title">Referiências Pessoais</h4>
-                    <button class="btn btn-sm right" id="btn-adicionar-experiencia" title="Adicionar experiência">Adicionar Referencias</button>
+                    <h4 class="card-title">Experiência e Referiências Pessoais</h4>
+                    <button class="btn btn-sm right" id="btn-adicionar-experiencia" title="Adicionar experiência">      +       </button>
                 </div>
 
                 <div class="card-body" id="div-experiencias">

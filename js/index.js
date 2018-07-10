@@ -41,7 +41,7 @@ $(function(){
                     '                <input type="text" class="form-control" placeholder="Nome" name="experiencia-cargo[]">'+
                     '            </div>'+
                     '            <div class="col-12 col-md-3">'+
-                    '                <input type="text" class="form-control" placeholder="Parentesco" name="experiencia-empresa[]">'+
+                    '                <input type="text" class="form-control" placeholder="Complemento/Parentesco" name="experiencia-empresa[]">'+
                     '            </div>'+
                     '            <div class="col-6 col-md-2">'+
                     '                <input type="text" class="form-control" placeholder="Cidade" name="experiencia-inicio[]">'+
