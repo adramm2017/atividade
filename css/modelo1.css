@@ -13,7 +13,7 @@ main{
 main .lateral{
     width: 30%;
     min-height: 100vh;
-    background-color:rgb(23, 23, 23);
+    background-color:rgb(150, 150, 150);
     padding: 10px;
     box-sizing: border-box;
     display: flex;
