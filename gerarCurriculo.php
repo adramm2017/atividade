@@ -1,8 +1,14 @@
-<?php 
-include ('index.php');
-$frases = $frase ;
-$nome = $_POST['nome'];
-echo $chato; ?>
+<?php
+    $nome = $_POST['nome'];
+    $cargo = $_POST['cargo'];
+    $endereco = $_POST['endereco'];
+    $telefone = $_POST['telefone'];
+    $email = $_POST['email'];
+    $resumo = $_POST['resumo'];
+    $foto = "img/avatar-1.png";
+    echo "adriano";
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +24,7 @@ echo $chato; ?>
         <section class="lateral">
             <img src="<?= $dados['foto']; ?>" alt="Foto" class="foto">
             <h2>Nome</h2>
-            <h1><?= $nome['nome'];?></h1>
-
-
-
+            <h1><?= printf($nome) ; ?></h1>
             <h3><?= $dados['cargo']; ?></h3>
         </section>
         <section class="principal">
