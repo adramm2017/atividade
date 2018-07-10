@@ -25,7 +25,7 @@
 
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome">
+                        <input type="text" class="form-control" name="nome" id="nome">
                     </div>
                     <div class="row">
                         <div class="col">
